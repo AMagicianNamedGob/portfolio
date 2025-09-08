@@ -15,24 +15,27 @@ import type { Site, Author, Socials, NavEntry, Blog } from "./Types/types";
 export const socials: Socials[] = [
 	{
 		platform: "email",
-		url: "alkaline@jaredtruscott.com",
+		url: "hello@jaredtruscott.com",
 	},
 	{
 		platform: "github",
-		url: "https://github.com/TruJared/",
+		url: "https://github.com/AMagicianNamedGob/",
 	},
 	{
 		platform: "web",
-		url: "https://jaredmakes.com",
+		url: "https://jaredtruscott.com",
 	},
 	{
-		platform: "bluesky",
-		url: "https://bsky.app/profile/trujared.bsky.social",
+		platform: "instagram",
+		url: "https://www.instagram.com/trujared/",
 	},
 	{
-		platform: "rss",
-		url: "/feed.xml",
-	}
+		platform: "threads",
+		url: "https://www.threads.net/@trujared",
+	}, {
+		platform: "facebook"
+		, url: "https://www.facebook.com/jared.truscott.7"
+	},
 ];
 
 // use in development to easily see all author socials at once, not useful in production, I suggest commenting this out in production
@@ -51,24 +54,19 @@ export const AUTHORS: Author[] = [
 		socials: socials,
 		email: 'jared@jaredmakes.com'
 	},
-	// example of a 2nd author with all socials - replace with your own author(s) or remove if not needed
-	{
-		id: 2,
-		name: "Jeff Goldblum",
-		socials: allSocials,
-		email: null
-	},
+
 ]
 
 export const SITE: Site = {
-	title: "Alkaline",
+	// title: "Not All Who Wander Are Lost",
+	title: "Ignore the mess, site is under reconstruction",
 	showTitleBackground: true,
-	faviconSrc: "/favicon.png", // in public directory
-	url: "https://alkaline-theme.xyz",
+	faviconSrc: "/favicon.svg", // in public directory
+	url: "https://jaredtruscott.com", // no trailing slash
 	ogImage: "/og-image.webp", // in public directory
 	author: AUTHORS[0].name, // Made with ❤️ by {your-name}
-	description: "A Neutral Base For Your Next Creation",
-	keywords: ["astro", "theme", "blog"],
+	description: "Jared Truscott is a fullstack developer based in western Pennsylvania.",
+	keywords: ["Jared Truscott", "Jared", "Truscott", "fullstack", "developer", "fullstack "],
 	disableIndexing: false, // true for no indexing
 	socials: socials,
 	locale: "en_US",
@@ -81,12 +79,12 @@ export const SITE: Site = {
 	fonts: [
 		{
 			typeface: "serif",
-			fontFamily: "SUSE",
-			fontWeights: ["100..800"],
+			fontFamily: "Merriweather",
+			fontWeights: ["300..900"],
 		},
 		{
 			typeface: "sans",
-			fontFamily: "Roboto",
+			fontFamily: "Inter",
 			fontWeights: ["100..900"],
 			includeItalic: true,
 		},
@@ -107,28 +105,8 @@ export const NAVIGATION: NavEntry[] = [
 		text: "Home",
 	},
 	{
-		href: "/elements",
-		text: "Elements",
-	},
-	{
-		href: "/features",
-		text: "Features",
-	},
-	{
-		href: "/blog",
-		text: "Blog",
-	},
-	{
-		href: "/tags",
-		text: "Tags",
-	},
-	{
-		href: "/faq",
-		text: "FAQ",
-	},
-	{
-		href: "/404",
-		text: "404",
+		href: "/portfolio",
+		text: "Portfolio",
 	},
 ];
 

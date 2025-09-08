@@ -114,6 +114,7 @@ export type GoogleFontFamily =
 	| "Inconsolata"
 	| "Indie Flower"
 	| "Itim"
+	| "Inter"
 	| "Josefin Sans"
 	| "Jost"
 	| "Julius Sans One"
