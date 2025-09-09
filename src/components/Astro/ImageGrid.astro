@@ -1,0 +1,60 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+type ImageItem = {
+  src: ImageMetadata | string;
+  alt: string;
+  width?: number;
+  height?: number;
+  /** Only used when src is ImageMetadata */
+  format?: "webp" | "png" | "jpg" | "jpeg" | "avif";
+};
+
+interface Props {
+  images: ImageItem[];
+  class?: string;
+}
+
+const { images, class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={[
+    "grid gap-4 xl:gap-16  grid-cols-[repeat(auto-fit,minmax(150px,1fr))] max-w-[90rem] mx-auto",
+    className,
+  ]}
+>
+  {
+    images.map((img) => {
+      const isStatic = typeof img.src !== "string"; // ImageMetadata vs string
+      return (
+        <div class="overflow-hidden">
+          {isStatic ? (
+            <Image
+              src={img.src as ImageMetadata}
+              width={img.width ?? 200}
+              height={img.height ?? 200}
+              format={img.format ?? "webp"}
+              alt={img.alt}
+              class:list={[
+                "bject-cover border-4 border-theme-secondary",
+                { "rounded-theme": true },
+              ]}
+            />
+          ) : (
+            <img
+              src={img.src as string}
+              width={img.width ?? 150}
+              height={img.height ?? 150}
+              alt={img.alt}
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          )}
+        </div>
+      );
+    })
+  }
+</div>

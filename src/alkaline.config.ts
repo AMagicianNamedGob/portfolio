@@ -58,15 +58,14 @@ export const AUTHORS: Author[] = [
 ]
 
 export const SITE: Site = {
-	// title: "Not All Who Wander Are Lost",
-	title: "Ignore the mess, site is under reconstruction",
+	title: "Not All Who Wander Are Lost",
 	showTitleBackground: true,
 	faviconSrc: "/favicon.svg", // in public directory
 	url: "https://jaredtruscott.com", // no trailing slash
 	ogImage: "/og-image.webp", // in public directory
 	author: AUTHORS[0].name, // Made with ❤️ by {your-name}
 	description: "Jared Truscott is a fullstack developer based in western Pennsylvania.",
-	keywords: ["Jared Truscott", "Jared", "Truscott", "fullstack", "developer", "fullstack "],
+	keywords: ["Jared Truscott", "Jared", "Truscott", "fullstack", "developer", "Atro", "React"],
 	disableIndexing: false, // true for no indexing
 	socials: socials,
 	locale: "en_US",
@@ -108,6 +107,15 @@ export const NAVIGATION: NavEntry[] = [
 		href: "/portfolio",
 		text: "Portfolio",
 	},
+	{
+		href: "/cv",
+		text: "Resume",
+	},
+	{
+		href: "mailto:hello@jaredtruscott.com?subject=Work%20with%20me%20inquiry",
+		text: "Work With Me",
+	},
+
 ];
 
 export const BLOG: Blog = {
