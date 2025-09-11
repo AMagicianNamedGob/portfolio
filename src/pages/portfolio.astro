@@ -3,23 +3,55 @@ import Layout from "../layouts/Layout.astro";
 import PageHeader from "@components/Astro/PageHeader.astro";
 import PortfolioGrid from "@components/Astro/PortfolioGrid.astro";
 
-import happy from "@assets/happy.png";
-import running from "@assets/running.png";
-import sunshine from "@assets/sunshine.png";
-import yoga from "@assets/yoga.png";
-import rail from "@assets/rail.png";
-import dumpsterFire from "@assets/dumpsterFire.png";
+import alk4 from "../assets/alk4.png";
 
 const images = [
-  { src: sunshine, alt: "Photo of the sun shining through the trees" },
-  { src: happy, alt: "Jared smiling" },
-  { src: yoga, alt: "Yoga pose one-footed crow" },
-  { src: running, alt: "Post-run glow" },
   {
-    src: dumpsterFire,
-    alt: "Jared showing one piece from his dumpster fire collection",
+    src: alk4,
+    alt: "Screenshot of the ALK4 logo",
+    projectName: "Alkaline",
+    projectDescription: "A neutral base for all your projects",
+    projectUrl: "https://github.com/amagiciannamedgob/alkaline",
+    width: 250,
+    height: 250,
   },
-  { src: rail, alt: "Photo of an old rail-road track in the woods" },
+  {
+    src: alk4,
+    alt: "Screenshot of the landing page for the Alkaline demo site",
+    projectName: "Alkaline Demo",
+    projectDescription:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    projectUrl: "https://alkaline-site.com",
+    width: 250,
+    height: 250,
+  },
+  {
+    src: alk4,
+    alt: "Screenshot of the ALK4 logo",
+    projectName: "Alkaline",
+    projectDescription: "A neutral base for all your projects",
+    projectUrl: "https://github.com/amagiciannamedgob/alkaline",
+    width: 250,
+    height: 250,
+  },
+  {
+    src: alk4,
+    alt: "Screenshot of the ALK4 logo",
+    projectName: "Alkaline",
+    projectDescription: "A neutral base for all your projects",
+    projectUrl: "https://github.com/amagiciannamedgob/alkaline",
+    width: 250,
+    height: 250,
+  },
+  {
+    src: alk4,
+    alt: "Screenshot of the ALK4 logo",
+    projectName: "Alkaline",
+    projectDescription: "A neutral base for all your projects",
+    projectUrl: "https://github.com/amagiciannamedgob/alkaline",
+    width: 250,
+    height: 250,
+  },
 ];
 
 const description =
@@ -27,8 +59,9 @@ const description =
 ---
 
 <Layout>
-  <PageHeader heading="My Portfolio" description={description} />
+  <!-- <PageHeader heading="My Portfolio" description={description} />
   <section class="mt-16">
     <PortfolioGrid images={images} />
-  </section>
+  </section> -->
+  <h2 class="text-center mt-10">Portfolio coming soon!</h2>
 </Layout>
