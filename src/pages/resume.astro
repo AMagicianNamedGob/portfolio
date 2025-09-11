@@ -1,0 +1,18 @@
+---
+import Layout from "@layouts/Layout.astro";
+import PageHeader from "@components/Astro/PageHeader.astro";
+
+const description =
+  "I’m Jared Truscott, a full-stack web developer specializing in e-commerce platforms, custom integrations, and modern frameworks like Astro, React, and TypeScript. Below you’ll find my professional experience, technical skills, and project highlights. You can download my resume directly from PDF viewer toolbar.";
+---
+
+<Layout>
+  <PageHeader description={description} heading="Resume" />
+
+  <iframe
+    src="Jared_Truscott_Resume_base.pdf#navpanes=0#view=FitW"
+    width="98%"
+    height="1100px"
+    class="border border-theme-secondary rounded-theme -mt-6 mx-auto"
+    title="Jared Truscott Resume"></iframe>
+</Layout>

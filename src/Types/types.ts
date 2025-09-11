@@ -82,7 +82,7 @@ export type Blog = {
 export type Docs = Blog;
 
 // This type is auto-generated. Do not edit manually.
-export type ThemeNames = 'theme-light' | 'theme-dark' | 'theme-matrix' | 'theme-neon-bliss' | 'theme-old-couch' | 'theme-slime';
+export type ThemeNames = 'theme-light' | 'theme-dark' | 'theme-matrix' | 'theme-neon-bliss' | 'theme-old-couch' | 'theme-pop-punk' | 'theme-slime';
 
 /**
  * Site Configuration Types

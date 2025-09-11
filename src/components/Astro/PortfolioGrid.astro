@@ -1,0 +1,62 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import Link from "./Link.astro";
+
+type ImageItem = {
+  src: ImageMetadata | string;
+  alt: string;
+  width?: number;
+  height?: number;
+  /** Only used when src is ImageMetadata */
+  format?: "webp" | "png" | "jpg" | "jpeg" | "avif";
+  projectName?: string;
+  projectDescription?: string;
+  projectUrl?: string;
+};
+
+interface Props {
+  images: ImageItem[];
+  class?: string;
+}
+
+const { images, class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={[
+    "grid gap-4 xl:gap-16  grid-cols-[repeat(auto-fit,minmax(250px,1fr))] max-w-[90rem] mx-auto",
+    className,
+  ]}
+>
+  {
+    images.map((img) => {
+      return (
+        <div class="overflow-hidden">
+          <Image
+            src={img.src as ImageMetadata}
+            width={img.width ?? 500}
+            height={img.height ?? 500}
+            format={img.format ?? "webp"}
+            alt={img.alt}
+            class:list={[
+              "bject-cover border-4 border-theme-secondary",
+              { "rounded-theme": true },
+            ]}
+          />
+          <span>
+            <p class="text-theme-accent-alt ml-2">
+              Project Name: {img.projectName}
+            </p>
+            <p class="text-theme-accent-alt ml-2">
+              Project Description: {img.projectDescription}
+            </p>
+            <p class="text-theme-accent ml-2 neon">
+              Project URL: {img.projectUrl}
+            </p>
+          </span>
+        </div>
+      );
+    })
+  }
+</div>

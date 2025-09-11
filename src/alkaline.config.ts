@@ -29,13 +29,7 @@ export const socials: Socials[] = [
 		platform: "instagram",
 		url: "https://www.instagram.com/trujared/",
 	},
-	{
-		platform: "threads",
-		url: "https://www.threads.net/@trujared",
-	}, {
-		platform: "facebook"
-		, url: "https://www.facebook.com/jared.truscott.7"
-	},
+
 ];
 
 // use in development to easily see all author socials at once, not useful in production, I suggest commenting this out in production
@@ -52,7 +46,7 @@ export const AUTHORS: Author[] = [
 		id: 1,
 		name: "Jared Truscott",
 		socials: socials,
-		email: 'jared@jaredmakes.com'
+		// email: 'jared@jaredmakes.com'
 	},
 
 ]
@@ -108,12 +102,12 @@ export const NAVIGATION: NavEntry[] = [
 		text: "Portfolio",
 	},
 	{
-		href: "/cv",
+		href: "/resume",
 		text: "Resume",
 	},
 	{
-		href: "mailto:hello@jaredtruscott.com?subject=Work%20with%20me%20inquiry",
-		text: "Work With Me",
+		href: "mailto:hello@jaredtruscott.com?subject=Work%20inquiry",
+		text: "Let's Talk",
 	},
 
 ];

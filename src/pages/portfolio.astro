@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "@components/Astro/PageHeader.astro";
+import PortfolioGrid from "@components/Astro/PortfolioGrid.astro";
+
+import happy from "@assets/happy.png";
+import running from "@assets/running.png";
+import sunshine from "@assets/sunshine.png";
+import yoga from "@assets/yoga.png";
+import rail from "@assets/rail.png";
+import dumpsterFire from "@assets/dumpsterFire.png";
+
+const images = [
+  { src: sunshine, alt: "Photo of the sun shining through the trees" },
+  { src: happy, alt: "Jared smiling" },
+  { src: yoga, alt: "Yoga pose one-footed crow" },
+  { src: running, alt: "Post-run glow" },
+  {
+    src: dumpsterFire,
+    alt: "Jared showing one piece from his dumpster fire collection",
+  },
+  { src: rail, alt: "Photo of an old rail-road track in the woods" },
+];
+
+const description =
+  "This portfolio highlights select projects from my work as a web developer with experience in e-commerce platforms, custom integrations, and modern frameworks including Astro, React, and TypeScript. The collection ranges from responsive websites and checkout flows to internal tools that streamline workflows and improve efficiency. Each project emphasizes clean code, strong performance, and practical solutions to real business problems.";
+---
+
+<Layout>
+  <PageHeader heading="My Portfolio" description={description} />
+  <section class="mt-16">
+    <PortfolioGrid images={images} />
+  </section>
+</Layout>

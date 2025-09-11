@@ -69,6 +69,17 @@
   --border-radius: 0.25rem;
 }
 
+.theme-pop-punk {
+	--color-background: #000000;
+	--color-gradient: var(--color-background);
+	--color-text: #ffffff;
+	--color-accent: #ff1493;
+	--color-accent-alt: #1ab81a;
+	--color-shadow: hsla(328, 100%, 54%, 0.5);
+	/* options */
+	--border-radius: 0.5rem;
+}
+
 .theme-slime {
   --color-background: #030901;
   --color-gradient: #ed880c;
