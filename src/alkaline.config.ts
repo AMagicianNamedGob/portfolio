@@ -56,7 +56,7 @@ export const SITE: Site = {
 	showTitleBackground: true,
 	faviconSrc: "/favicon.svg", // in public directory
 	url: "https://jaredtruscott.com", // no trailing slash
-	ogImage: "/og-image.webp", // in public directory
+	ogImage: "/og-image.png", // in public directory
 	author: AUTHORS[0].name, // Made with ❤️ by {your-name}
 	description: "Jared Truscott is a fullstack developer based in western Pennsylvania.",
 	keywords: ["Jared Truscott", "Jared", "Truscott", "fullstack", "developer", "Atro", "React"],
