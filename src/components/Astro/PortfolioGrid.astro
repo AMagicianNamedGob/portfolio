@@ -27,7 +27,7 @@ const { images, class: className = "" } = Astro.props;
 
 <div
   class:list={[
-    "grid gap-4 xl:gap-16  grid-cols-[repeat(auto-fit,minmax(150px,1fr))] max-w-[90rem] mx-auto",
+    "grid gap-4 xl:gap-16 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] max-w-[90rem] sm:mx-4",
     className,
   ]}
 >
@@ -67,17 +67,13 @@ const { images, class: className = "" } = Astro.props;
               {img.projectName}
             </span>
           </h2>
-          <p class="relative z-10 text-sm text-theme-primary -mt-1 group-hover:text-theme-secondary">
+          <p class="relative z-10 text-sm text-theme-primary mt-1 group-hover:text-theme-secondary opacity-70">
             {img.projectDescription}
           </p>
-          <p class="relative z-20 -ml-1 flex text-sm font-medium">
-            {/* <Icon
-            name="ri:link"
-            class="h-4 w-4 group-hover:text-theme-secondary"
-          /> */}
+          <p class="relative z-20 ml-1 flex text-sm font-medium">
             <Link
               href={img.projectUrl}
-              class="ml-1 -mt-4 group-hover:text-theme-secondary hover:cursor-pointer"
+              class="-ml-1 -mt-2 group-hover:text-theme-secondary hover:cursor-pointer"
               text={img.urlText || img.projectUrl}
               external
             />

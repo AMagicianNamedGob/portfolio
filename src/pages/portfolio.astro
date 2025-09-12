@@ -3,54 +3,57 @@ import Layout from "../layouts/Layout.astro";
 import PageHeader from "@components/Astro/PageHeader.astro";
 import PortfolioGrid from "@components/Astro/PortfolioGrid.astro";
 
-import alk4 from "../assets/alk4.png";
+import astro from "@assets/astro-icon-light-gradient.png";
+import alk4 from "@assets/alk4.png";
+import pallette from "@assets/artist-palette.png";
+import bigC from "@assets/bigcommerce_logo.png";
+import node from "@assets/Node.js.png";
 
 const images = [
   {
-    src: alk4,
-    alt: "Screenshot of the Alkaline logo",
+    src: astro,
+    alt: "Astro logo",
     projectName: "Alkaline",
     projectDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Alkaline is a sleek, Astro-powered theme built for clean, low-JavaScript sites—complete with 14 color schemes, MDX + blog/docs support, SEO optimizations, and Tailwind & some TypeScript out of the box.",
     projectUrl: "https://github.com/amagiciannamedgob/alkaline",
     urlText: "View on GitHub",
   },
   {
     src: alk4,
-    alt: "Screenshot of the landing page for the Alkaline demo site",
+    alt: "Alkaline logo",
     projectName: "Alkaline Demo",
     projectDescription:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    projectUrl: "https://alkaline-site.com",
-    width: 250,
-    height: 250,
+      "This portfolio entry highlights the demo site for Alkaline, a modern Astro theme I built for speed, clean design, and developer efficiency. The site itself runs on Alkaline, providing a live demonstration of its features, performance, and flexibility.",
+    projectUrl: "https://alkaline-demo.com/",
+    urlText: "Alkaline Demo",
   },
   {
-    src: alk4,
-    alt: "Screenshot of the ALK4 logo",
-    projectName: "Alkaline",
-    projectDescription: "A neutral base for all your projects",
-    projectUrl: "https://github.com/amagiciannamedgob/alkaline",
-    width: 250,
-    height: 250,
+    src: pallette,
+    alt: "Color Genie logo",
+    projectName: "Color Genie",
+    projectDescription:
+      "Color-Genie lets you input just one base color and then produces over 70 tones from it—with advanced options for CSS or Tailwind output—so you can copy/paste the ready-made code straight into your project. It’s designed for developers who want minimal setup and maximal flexibility.",
+    projectUrl: "https://color-genie.site/",
+    urlText: "Color Genie",
   },
   {
-    src: alk4,
-    alt: "Screenshot of the ALK4 logo",
-    projectName: "Alkaline",
-    projectDescription: "A neutral base for all your projects",
-    projectUrl: "https://github.com/amagiciannamedgob/alkaline",
-    width: 250,
-    height: 250,
+    src: bigC,
+    alt: "BigCommerce logo",
+    projectName: "BigCommerce Widgets",
+    projectDescription:
+      "This portfolio entry showcases the BigCommerce Widgets, a set of customizable components designed to enhance the e-commerce experience on BigCommerce stores. Built with performance and flexibility in mind, these widgets can be easily integrated into any BigCommerce theme.",
+    projectUrl: "https://github.com/AMagicianNamedGob/widgets",
+    urlText: "BigCommerce Widgets on GitHub",
   },
   {
-    src: alk4,
-    alt: "Screenshot of the ALK4 logo",
-    projectName: "Alkaline",
-    projectDescription: "A neutral base for all your projects",
-    projectUrl: "https://github.com/amagiciannamedgob/alkaline",
-    width: 250,
-    height: 250,
+    src: node,
+    alt: "Node.js logo",
+    projectName: "Sample-Scripts",
+    projectDescription:
+      "Sample-Scripts is a lightweight repository showcasing Python and Node.js code examples taken from real projects. These scripts aren’t production-ready or general-purpose, but provide clear demonstrations of specific use cases across both languages.",
+    projectUrl: "https://github.com/AMagicianNamedGob/sample-scripts",
+    urlText: "Sample-Scripts on GitHub",
   },
 ];
 
