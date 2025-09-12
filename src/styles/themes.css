@@ -27,14 +27,24 @@
 }
 
 .theme-dark {
-  --color-background: #1e2723;
-  --color-gradient: #2a3c2f;
-  --color-text: #e6dcc1;
-  --color-accent: #c76815;
-  --color-accent-alt: #b8a86a;
-  --color-shadow: #162019;
-  /* options */
-  --border-radius: 0.4rem;
+	--color-background: #1b2838;
+	--color-gradient: #2c3e50;
+	--color-text: #f0e6d2;
+	--color-accent: #3498db;
+	--color-accent-alt: #e67e22;
+	--color-shadow: #0a1721; /* Darker shadow for contrast */
+	/* options */
+	--border-radius: 0.4rem;}
+
+.theme-invisible {
+	--color-background: #1e2723;
+	--color-gradient: #2a3c2f;
+	--color-text: #e6dcc1;
+	--color-accent: #c76815;
+	--color-accent-alt: #b8a86a;
+	--color-shadow: #162019;
+	/* options */
+	--border-radius: 0.4rem;
 }
 
 .theme-matrix {

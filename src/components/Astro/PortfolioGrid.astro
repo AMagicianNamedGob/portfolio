@@ -1,6 +1,7 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import Link from "./Link.astro";
 
 type ImageItem = {
@@ -13,6 +14,7 @@ type ImageItem = {
   projectName: string;
   projectDescription: string;
   projectUrl: string;
+  urlText?: string;
 };
 
 interface Props {
@@ -29,34 +31,59 @@ const { images, class: className = "" } = Astro.props;
     className,
   ]}
 >
-  {
-    images.map((img) => {
-      return (
-        <div class="overflow-hidden">
-          <h3 class="ml-4">{img.projectName}</h3>
-          <a
-            class="text-theme-accent ml-2 rounded-sm px-1 inline-block"
-            href={img.projectUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={img.src as ImageMetadata}
-              width={img.width ?? 500}
-              height={img.height ?? 500}
-              format={img.format ?? "webp"}
-              alt={img.alt}
-              class:list={[
-                "object-cover border-4 border-theme-secondary hover:border-theme-primary hover:border-2 hover:scale-105 transition-all",
-                { "rounded-theme": true },
-              ]}
-            />
-          </a>
-          <p class="text-theme-primary text-pretty ml-4">
+  <ul
+    role="list"
+    class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      images.map((img) => (
+        <li class="group relative flex flex-col items-start">
+          <div class="relative z-10 flex h-12 w-12 items-center justify-center mb-4 rounded-full bg-theme-accent shadow-theme-secondary shadow-md">
+            {typeof img.src === "object" ? (
+              <Image
+                alt={img.alt || img.projectName}
+                loading="lazy"
+                width={img.width || 32}
+                height={img.height || 32}
+                format={img.format || "png"}
+                class="h-9 w-9 rounded-full"
+                src={img.src as ImageMetadata}
+              />
+            ) : (
+              <img
+                alt={img.alt || img.projectName}
+                loading="lazy"
+                width={img.width || 32}
+                height={img.height || 32}
+                class="h-9 w-9 rounded-full"
+                src={img.src}
+              />
+            )}
+          </div>
+          <h2 class="text-base font-semibold text-theme-accent-primary">
+            <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-theme-accent-alt opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl" />
+            <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+            <span class="relative z-10 text-theme-primary group-hover:text-theme-secondary">
+              {img.projectName}
+            </span>
+          </h2>
+          <p class="relative z-10 text-sm text-theme-primary -mt-1 group-hover:text-theme-secondary">
             {img.projectDescription}
           </p>
-        </div>
-      );
-    })
-  }
+          <p class="relative z-20 -ml-1 flex text-sm font-medium">
+            {/* <Icon
+            name="ri:link"
+            class="h-4 w-4 group-hover:text-theme-secondary"
+          /> */}
+            <Link
+              href={img.projectUrl}
+              class="ml-1 -mt-4 group-hover:text-theme-secondary hover:cursor-pointer"
+              text={img.urlText || img.projectUrl}
+              external
+            />
+          </p>
+        </li>
+      ))
+    }
+  </ul>
 </div>
