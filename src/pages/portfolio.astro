@@ -1,5 +1,4 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import PageHeader from "@components/Astro/PageHeader.astro";
 import PortfolioGrid from "@components/Astro/PortfolioGrid.astro";
 
@@ -8,14 +7,15 @@ import alk4 from "@assets/alk4.png";
 import pallette from "@assets/artist-palette.png";
 import bigC from "@assets/bigcommerce_logo.png";
 import node from "@assets/Node.js.png";
-
+import alexa from "@assets/Amazon_Alexa_App_Logo.png";
+import Layout from "@layouts/Layout.astro";
 const images = [
   {
     src: astro,
     alt: "Astro logo",
     projectName: "Alkaline",
     projectDescription:
-      "Alkaline is a sleek, Astro-powered theme built for clean, low-JavaScript sites—complete with 14 color schemes, MDX + blog/docs support, SEO optimizations, and Tailwind & some TypeScript out of the box.",
+      "Alkaline is a sleek, Astro-powered theme built for clean, low-JavaScript sites—complete with 14 color schemes, MDX + blog/docs support, SEO optimizations, and Tailwind with some TypeScript out of the box.",
     projectUrl: "https://github.com/amagiciannamedgob/alkaline",
     urlText: "View on GitHub",
   },
@@ -33,7 +33,7 @@ const images = [
     alt: "Color Genie logo",
     projectName: "Color Genie",
     projectDescription:
-      "Color-Genie lets you input just one base color and then produces over 70 tones from it—with advanced options for CSS or Tailwind output—so you can copy/paste the ready-made code straight into your project. It’s designed for developers who want minimal setup and maximal flexibility.",
+      "Color-Genie is a streamlined color palette tool that generates 70+ harmonious tones from a single base color. Features instant CSS and Tailwind code output with advanced customization options—built for developers who need quick implementation with maximum creative control.",
     projectUrl: "https://color-genie.site/",
     urlText: "Color Genie",
   },
@@ -42,7 +42,7 @@ const images = [
     alt: "BigCommerce logo",
     projectName: "BigCommerce Widgets",
     projectDescription:
-      "This portfolio entry showcases the BigCommerce Widgets, a set of customizable components designed to enhance the e-commerce experience on BigCommerce stores. Built with performance and flexibility in mind, these widgets can be easily integrated into any BigCommerce theme.",
+      "This portfolio entry showcases BigCommerce Widgets, a set of customizable components designed to enhance the e-commerce experience on BigCommerce stores. Built with performance and flexibility in mind, these widgets can be easily integrated into any BigCommerce theme.",
     projectUrl: "https://github.com/AMagicianNamedGob/widgets",
     urlText: "BigCommerce Widgets on GitHub",
   },
@@ -55,10 +55,19 @@ const images = [
     projectUrl: "https://github.com/AMagicianNamedGob/sample-scripts",
     urlText: "Sample-Scripts on GitHub",
   },
+  {
+    src: alexa,
+    alt: "Amazon Alexa logo",
+    projectName: "Amazon Alexa Skills",
+    projectDescription:
+      "I assisted in the development of several custom Alexa Skills, including an innovative Ethereum mining integration. Notable project includes a rapid-prototype multilingual Alexa Skill for KFC, demonstrating real-time language switching between English and Spanish. The demo showcased the potential of voice-activated technology in customer service applications.",
+    projectUrl: " https://vimeo.com/309762069",
+    urlText: "Sample Video",
+  },
 ];
 
 const description =
-  "This portfolio highlights select projects from my work as a web developer with experience in e-commerce platforms, custom integrations, and modern frameworks including Astro, React, and TypeScript. The collection ranges from responsive websites and checkout flows to internal tools that streamline workflows and improve efficiency. Each project emphasizes clean code, strong performance, and practical solutions to real business problems.";
+  "This portfolio highlights select projects from my work as a web developer with experience in e-commerce platforms, custom integrations, and modern frameworks including Astro, React, and TypeScript. The collection ranges from responsive websites to internal tools that streamline workflows and improve efficiency. Each project emphasizes clean code, strong performance, and practical solutions to real business problems.";
 ---
 
 <Layout>
