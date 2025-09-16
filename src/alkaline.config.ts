@@ -55,7 +55,7 @@ export const SITE: Site = {
 	title: "Not All Who Wander Are Lost",
 	showTitleBackground: true,
 	faviconSrc: "/favicon.svg", // in public directory
-	url: "https://jaredtruscott.com", // no trailing slash
+	url: "https://www.jaredtruscott.com", // no trailing slash
 	ogImage: "/og-image.jpg", // in public directory
 	author: AUTHORS[0].name, // Made with ❤️ by {your-name}
 	description: "Jared Truscott is a fullstack developer based in western Pennsylvania.",
