@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm run build:themes && astro dev",
     "start": "npm run build:themes && astro dev",
-    "build": "npm run astro check && astro build",
+    "build": "npm run astro check && npm run build:themes && astro build",
     "check": "npm run build:themes && astro check",
     "preview": "npm run build:themes && astro preview",
     "astro": "astro",
