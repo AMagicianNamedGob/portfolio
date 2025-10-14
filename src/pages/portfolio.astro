@@ -1,4 +1,6 @@
 ---
+import Layout from "@layouts/Layout.astro";
+
 import PageHeader from "@components/Astro/PageHeader.astro";
 import PortfolioGrid from "@components/Astro/PortfolioGrid.astro";
 
@@ -8,7 +10,8 @@ import pallette from "@assets/artist-palette.png";
 import bigC from "@assets/bigcommerce_logo.png";
 import node from "@assets/Node.js.png";
 import alexa from "@assets/Amazon_Alexa_App_Logo.png";
-import Layout from "@layouts/Layout.astro";
+import eldrow from "@assets/eldrow.png";
+
 const images = [
   {
     src: astro,
@@ -63,6 +66,15 @@ const images = [
       "I assisted in the development of several custom Alexa Skills, including an innovative Ethereum mining integration. Notable project includes a rapid-prototype multilingual Alexa Skill for KFC, demonstrating real-time language switching between English and Spanish. The demo showcased the potential of voice-activated technology in customer service applications.",
     projectUrl: " https://vimeo.com/309762069",
     urlText: "Sample Video",
+  },
+  {
+    src: eldrow,
+    alt: "Eldrow logo",
+    projectName: "Eldrow",
+    projectDescription:
+      "Eldrow is a clone of Worldle, the popular daily word game, built using React and TypeScript. This project showcases my ability to create engaging web applications with modern frameworks, focusing on user experience,  and responsive design.",
+    projectUrl: "https://eldrow.xyz/",
+    urlText: "Play Eldrow",
   },
 ];
 
